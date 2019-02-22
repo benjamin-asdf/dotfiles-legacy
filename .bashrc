@@ -22,4 +22,17 @@ unset env
 
 alias cdCos='cd "c:/CosEntitas/idlegame/IdleGame"'
 
-export PATH=c:/cygwin64/bin/$PATH
+
+# git aliases
+
+alias gs='git status'
+alias gfetcho='git fetch origin'
+alias gch='git checkout'
+alias chdev="gch develop"
+alias gdiscardAll='git checkout .'
+alias gdiscardShit='git checkout *.mat *.asset *.spriteatlas *.prefab'
+
+alias fetchdev="git fetch origin develop:develop"
+alias mergedev='git merge develop'
+alias gcom='git commit -m'
+alias gcomall='git add --all && git commit -m'
