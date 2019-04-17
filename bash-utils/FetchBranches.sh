@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 branches=$(git branch | grep "[^\*] ")
 remoteBranches=$(git branch -r)
 
