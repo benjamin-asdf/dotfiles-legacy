@@ -35,3 +35,9 @@ alias gf=gitf.sh # "*/" ".*" $*
 alias gfa="gf add"
 alias gfc="gf checkout"
 alias gfr="gf reset"
+
+# emacs
+
+alias emax="emacsclient -t"
+alias emacsc="emacsclient -a emacs"
+

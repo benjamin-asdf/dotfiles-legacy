@@ -118,3 +118,19 @@ fi
 
 
 export PATH=$PATH:~/scripts
+
+export ALTERNATE_EDITOR=""
+# $EDITOR should open in terminal
+export EDITOR="emacsclient -t"
+# $VISUAL opens in GUI with non-daemon as alternate
+export VISUAL="emacsclient -a emacs"
+
+export GTAGSLABEL="pygments"
+
+
+
+# homsick
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
