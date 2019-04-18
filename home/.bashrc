@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 
-export PATH=$PATH:~/scripts
+export PATH=$PATH:~/.scripts
 
 export ALTERNATE_EDITOR=""
 # $EDITOR should open in terminal
