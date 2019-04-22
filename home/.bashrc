@@ -139,3 +139,7 @@ export IDLEGAMEDIR="$COSDIR/IdleGame/"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+
+
+# workspaces TODO find out where to put gsettings
+# gsettings set org.gnome.mutter workspaces-only-on-primary false
