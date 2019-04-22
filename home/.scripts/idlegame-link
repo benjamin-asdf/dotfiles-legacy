@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+assetsMounted=$(mount -l | grep IdleGameSymbolicLink)
+
+
+[ -z "$assetsMounted" ] && sudo mkdir -p /home/benj/idlegame/IdleGameSymbolicLink/Assets && sudo mount --bind /home/benj/idlegame/IdleGame/Assets /home/benj/idlegame/IdleGameSymbolicLink/Assets
+
+unityArgs="-forcefree -CacheServerIPAddress 192.168.2.113:80 -buildTarget standalone -projectPath /home/benj/idlegame/IdleGameSymbolicLink"
+
+unity-editor $unityArgs

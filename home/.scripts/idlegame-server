@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+dirCmd="cd $IDLEGAMEDIR"
+konsole -p tabtitle="idlegame-server" -e bash -c "$dirCmd ; bash ./start_local_server.sh ; bash" &
