@@ -13,9 +13,7 @@ alias gcomall='git add --all && git commit -m'
 
 alias gpl="git pull"
 alias gpu="git push"
-alias startserver="dotnet run --project ../Build/Build StartLocalServer"
 alias gitInit=gitInit.sh
-
 
 alias gx=gitx.sh # "*." "" $*
 alias gxa="gx add"
