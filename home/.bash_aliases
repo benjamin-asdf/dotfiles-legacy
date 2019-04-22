@@ -1,4 +1,4 @@
-# git aliases
+# git
 alias gs='git status'
 alias gfo='git fetch origin'
 alias gch='git checkout'
