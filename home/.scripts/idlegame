@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 
-UnityArgs="-forcefree -CacheServerIPAddress 192.168.2.113:80 -buildTarget standalone -projectPath $IDLEGAMEDIR"
-
-echo running unity args: $UnityArgs
-
-konsole -p tabtitle="idlegame-client" -e bash -c "unity-editor $UnityArgs" &
+spawn-idlegame-konsole.sh idlegame-client $IDLEGAMEDIR

@@ -2,12 +2,8 @@
 
 assetsMounted=$(mount -l | grep IdleGameSymbolicLink)
 
-SymlinkDir=$COSDIR/IdleGameSymbolicLink
+symlink_dir=$COSDIR/IdleGameSymbolicLink
 
-[ -z "$assetsMounted" ] && sudo mkdir -p $SymlinkDir/Assets && sudo mount --bind $IDLEGAMEDIR/Assets $SymlinkDir/Assets
+[ -z "$assetsMounted" ] && sudo mkdir -p $symlink_dir/Assets && sudo mount --bind $IDLEGAMEDIR/Assets $symlink_dir/Assets
 
-unityArgs="-forcefree -CacheServerIPAddress 192.168.2.113:80 -buildTarget standalone -projectPath $SymlinkDir"
-
-echo unity args: $unityArgs
-
-konsole -p tabtitle="idlegame-link" -e bash -c "unity-editor $unityArgs" &
+spawn-idlegame-konsole.sh idlegame-link $symlink_dir
