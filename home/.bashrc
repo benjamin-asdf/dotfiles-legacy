@@ -130,7 +130,7 @@ export VISUAL="emacsclient -a emacs"
 export GTAGSLABEL="pygments"
 
 export COSDIR="/home/benj/idlegame"
-export IDLEGAMEDIR="$COSDIR/IdleGame/"
+export IDLEGAMEDIR="$COSDIR/IdleGame"
 
 
 

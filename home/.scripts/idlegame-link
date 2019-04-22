@@ -8,4 +8,6 @@ SymlinkDir=$COSDIR/IdleGameSymbolicLink
 
 unityArgs="-forcefree -CacheServerIPAddress 192.168.2.113:80 -buildTarget standalone -projectPath $SymlinkDir"
 
-unity-editor $unityArgs
+echo unity args: $unityArgs
+
+konsole -p tabtitle="idlegame-link" -e bash -c "unity-editor $unityArgs" &
