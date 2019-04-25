@@ -7,8 +7,9 @@
  - get all the scripts,
  - if you want the scripts to work:
  - set CosDir and IdleGameDir in your .bashrc
- - get fish with the apt
- - get konsole with the apt
+ - get fish with apt
+ - get konsole with apt
+ - ok should be obvious: make the scripts excetable and put them in the path
 
  - you need to install .NET Core, just google and follow the instructions on
   - Microsofts website, I remember it was straight forward
@@ -36,13 +37,13 @@
  - latest version worked for me
  - idlegame-server script should work now I think.
  - INFOS:
- - starting server took a real long as time the first time
+ - starting server took a real long ass time the first time
  - if you get the warning with "your docker engine is in swarm mode"
    - you can do what the warning says and run "docker swarm leave"
  - if you get something with docker-credentials,
    - you can do what the warning tells you and install the package
    - I seem to remember it was docker-compose-credentials
-   - whatever it was, you can install it with the apt
+   - whatever it was, you can install it with apt
 
 -unity:
  - go to the unity thread
