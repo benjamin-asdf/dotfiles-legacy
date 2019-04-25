@@ -1,0 +1,79 @@
+-Nomenclature:
+  - CosDir: The root of the git project
+  - IdleGameDir: The root of the unity project
+    - (it is located in CosDir/IdleGame)
+
+-Start:
+ - get all the scripts,
+ - if you want the scripts to work:
+ - set CosDir and IdleGameDir in your .bashrc
+ - get fish with the apt
+ - get konsole with the apt
+
+ - you need to install .NET Core, just google and follow the instructions on
+  - Microsofts website, I remember it was straight forward
+  - btw .NET Core Runtime is included in .NET Core SDK
+
+(
+- I'm not entirely sure if you need it, but I also installed Mono
+- unity also downloads this already I think, I think you could add this to the path and it also works
+- you might come back to this if you want to make omnisharp work
+)
+
+(for emacs I just had mono installed, then ran a function to install the server and it worked)
+
+-Game:
+ - install git, obviously
+ - clone repo
+ - install git lfs
+ - do git lfs install (not sure if neccessary)
+---->>> IMPORTANT: git lfs fetch && git lfs pull *in the cosDir* (not IdleGameDir) ! <<<-----
+    (figuring this out was what I spend most time with)
+
+-server:
+ - go to docker website, follow their instructions to install
+ - install docker-compose, also to be found on the website
+ - latest version worked for me
+ - idlegame-server script should work now I think.
+ - INFOS:
+ - starting server took a real long as time the first time
+ - if you get the warning with "your docker engine is in swarm mode"
+   - you can do what the warning says and run "docker swarm leave"
+ - if you get something with docker-credentials,
+   - you can do what the warning tells you and install the package
+   - I seem to remember it was docker-compose-credentials
+   - whatever it was, you can install it with the apt
+
+-unity:
+ - go to the unity thread
+ - download the version we are currently using
+ - make the installer excecutable ("sudo chmod +x /path/to/installer")
+ - run the installer, done
+ - I also downloaded the AppImage for unity hub but don't use it.
+
+(ah before you do this you can
+checkout the script and make sure the cashe server address is set correctly,
+I guess this will speed your initial start time up)
+- the script idlegame should work now I think
+- unity will import and stuff as usual
+- you will need to generate sprite objects
+- if there are compile errors:
+- maybe restarting, maybe you didn't do git lfs correctly
+
+
+-Symlink
+ - the create-idlegame-link script uses fish, not sure why
+ - I just quickly installed it with apt
+ - It's quite chill actually
+ - start fish, navigate to IdleGameDir, run the script
+ - then run idlegame-link,
+ - should be good
+ - it starts the symlink project for you
+
+
+-Caveats:
+ - you get an assertion fail about some socket binding,
+   but it doesnt do anything
+ - I had it twice that I after doing "idlegame && idlegame-link && idlegame-server"
+  (exactly this command, running the stuff in isolation was fine)
+ - that my asset data base was corrupted and only `git clean -xdf` saved me
