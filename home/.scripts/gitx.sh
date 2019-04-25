@@ -2,7 +2,6 @@
 
 source jit.sh
 
-
-gitCommand=$1
+git_command=$1
 shift;
-jit $gitCommand "*." "" $*
+jit $git_command "*." "" $*
