@@ -143,3 +143,5 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 # workspaces TODO find out where to put gsettings
 # gsettings set org.gnome.mutter workspaces-only-on-primary false
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
