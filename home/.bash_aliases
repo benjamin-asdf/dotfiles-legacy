@@ -39,3 +39,4 @@ alias gfr="gf reset"
 alias emax="emacsclient -t"
 alias emacsc="emacsclient -a emacs"
 
+alias idlegame-all="idlegame && idlegame-server && idlegame-link"
