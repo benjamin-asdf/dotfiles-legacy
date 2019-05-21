@@ -1,3 +1,3 @@
-function fetchdev --description 'checkout all'
+function gdiscard_all --description 'checkout all'
     git checkout .
 end
