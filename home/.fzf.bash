@@ -11,3 +11,5 @@ fi
 # Key bindings
 # ------------
 source "/home/benj/.fzf/shell/key-bindings.bash"
+
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
