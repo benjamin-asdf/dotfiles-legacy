@@ -135,7 +135,6 @@ export COSDIR="/home/benj/idlegame"
 export IDLEGAMEDIR="$COSDIR/IdleGame"
 
 
-
 # homeshick
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
