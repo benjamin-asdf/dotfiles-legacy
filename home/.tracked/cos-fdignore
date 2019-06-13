@@ -23,6 +23,9 @@
 *.XML
 *.pdf
 *.preset
+*.fbx
+*.renderTexture
+*.asmdef
 
 /*
 
@@ -38,3 +41,6 @@
 **/OneSignal/
 **/_AudioToObject/
 **/JavaScripts/
+**/_TerrainAutoUpgrade
+**/StreamingAssets
+**/Prefabs
