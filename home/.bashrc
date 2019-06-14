@@ -146,3 +146,5 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 # gsettings set org.gnome.mutter workspaces-only-on-primary false
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
