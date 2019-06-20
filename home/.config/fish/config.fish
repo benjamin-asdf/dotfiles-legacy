@@ -6,6 +6,10 @@ set -gx VISUAL "emacsclient -a emacs"
 set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
 
+# idlegame
+set -gx COSDIR "/home/benj/idlegame"
+set -gx IDLEGAMEDIR "$COSDIR/IdleGame"
+
 set -x PATH $PATH ~/.scripts/
 
 thefuck --alias | source
