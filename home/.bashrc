@@ -117,11 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 
-export PATH=$PATH:~/bin
 export PATH=$PATH:~/.scripts
-export PATH=$PATH:~/.nicholas-scripts
-export PATH=$PATH:/opt/unity/bin/
-export PATH=$PATH:/opt/tox/bin/
 
 
 export ALTERNATE_EDITOR=""
