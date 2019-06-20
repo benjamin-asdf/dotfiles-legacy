@@ -128,6 +128,7 @@ export VISUAL="emacsclient -a emacs"
 
 export GTAGSLABEL="pygments"
 
+# idlegame
 export COSDIR="/home/benj/idlegame"
 export IDLEGAMEDIR="$COSDIR/IdleGame"
 
