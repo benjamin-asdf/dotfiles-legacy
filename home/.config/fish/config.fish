@@ -13,3 +13,6 @@ set -gx IDLEGAMEDIR "$COSDIR/IdleGame"
 set -x PATH $PATH ~/.scripts/
 
 thefuck --alias | source
+
+# gtags
+set -gx GTAGSLABEL "pygments"
