@@ -1,9 +1,3 @@
 #!/usr/bin/env bash
 
-assetsMounted=$(mount -l | grep IdleGameSymbolicLink)
-
-symlink_dir=$COSDIR/IdleGameSymbolicLink
-
-[ -z "$assetsMounted" ] && sudo mkdir -p $symlink_dir/Assets && sudo mount --bind $IDLEGAMEDIR/Assets $symlink_dir/Assets
-
-spawn-idlegame-konsole.sh idlegame-link $symlink_dir
+start-idlegame-link.sh IdleGameSymbolicLink

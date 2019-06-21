@@ -1,3 +1,1 @@
-function rtnl_redshift
-	redshift -O 1700
-end
+rtnl_redshift.fish
