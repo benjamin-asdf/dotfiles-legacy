@@ -1,21 +1,7 @@
 #!/usr/bin/fish
 
-# TODO better place for messages that goes into git
-#
-# if test -e ~/.config/benj/awarnesser-messages
-#     echo file exsits
-# end
-
-set best_messages (cat ~/Documents/best-messages)
-
-function best_message
-    set rand_num (math (random)%(count $best_messages))
-    printf $best_messages[(math $rand_num +1)]
-end
-
 while true
-    set msg (best_message)
-    echo sending notification: $msg
-    notify-send "Some time passed." $msg
+    notify-send "Some time passed." (best-message)
     sleep 20m
+    echo do notify-send
 end
