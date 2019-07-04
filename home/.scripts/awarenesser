@@ -2,6 +2,6 @@
 
 while true
     notify-send "Some time passed." (best-message)
-    sleep 20m
     echo do notify-send
+    sleep 15m
 end
