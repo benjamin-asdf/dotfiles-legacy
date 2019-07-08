@@ -1,1 +1,0 @@
-rtnl_redshift.fish
