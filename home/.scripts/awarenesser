@@ -1,0 +1,7 @@
+#!/usr/bin/fish
+
+while true
+    notify-send "Some time passed." (best-message)
+    echo do notify-send
+    sleep 15m
+end
