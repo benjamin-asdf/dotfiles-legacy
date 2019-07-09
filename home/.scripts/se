@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+du -a ~/.scripts/ ~/.config/fish/functions/ | awk '{print $2}' | fzf | xargs -r emacsclient -n
