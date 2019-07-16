@@ -118,6 +118,7 @@ fi
 
 
 export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.nimble/bin
 
 
 export ALTERNATE_EDITOR=""
