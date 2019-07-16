@@ -1,0 +1,11 @@
+[Unit]
+Description=Send awareness notifications
+
+[Service]
+Type=simple
+WorkingDirectory=/home/benj
+ExecStart=/usr/bin/fish -c aware -i 30
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
