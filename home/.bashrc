@@ -118,6 +118,7 @@ fi
 
 
 export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.nimble/bin
 
 
 export ALTERNATE_EDITOR=""
@@ -142,7 +143,7 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 # workspaces TODO find out where to put gsettings
 # gsettings set org.gnome.mutter workspaces-only-on-primary false
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 export FZF_DEFAULT_COMMAND='fd --type f'
