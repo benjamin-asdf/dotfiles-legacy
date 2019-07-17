@@ -4,7 +4,7 @@ Description=Send awareness notifications
 [Service]
 Type=simple
 WorkingDirectory=/home/benj
-ExecStart=/usr/bin/fish -c aware -i 30
+ExecStart=/usr/bin/fish -c aware
 Restart=on-failure
 
 [Install]
