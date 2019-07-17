@@ -11,7 +11,9 @@ set -gx COSDIR "/home/benj/idlegame"
 set -gx IDLEGAMEDIR "$COSDIR/IdleGame"
 
 set -x PATH $PATH ~/.scripts/
-set -x PATH $PATH ~/.nimble/bin/
+# set -x PATH $PATH ~/.nimble/bin/
 
 # gtags
 set -gx GTAGSLABEL "pygments"
+
+thefuck --alias | source
