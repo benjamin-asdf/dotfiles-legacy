@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-
-
 jit() {
    git_command=$1;
    before=$2;
