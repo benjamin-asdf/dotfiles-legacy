@@ -4,5 +4,4 @@ source jit.sh
 
 gitCommand=$1
 shift;
-jit $gitCommand "*/" ".*" $*
-
+jit $gitCommand "*" "/*" $*

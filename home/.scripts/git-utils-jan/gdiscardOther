@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+git checkout *.mat *.asset *.spriteatlas *.prefab
