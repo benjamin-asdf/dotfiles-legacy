@@ -2,13 +2,20 @@
 
 function aware -d "Send notifcations for awareness"
     set -l interval 15
+    set -l oneShot ""
 
     getopts $argv | while read -l key value
         switch $key
             case _
                 _aware_help >&2
                 return
-            case i interval
+            case o
+                set oneShot $value
+            case one-shot
+                set oneShot $value
+            case interval
+                set interval $value
+            case i
                 set interval $value
             case h help
                 _aware_help >&2
@@ -16,9 +23,13 @@ function aware -d "Send notifcations for awareness"
         end
     end
 
+    if test {$oneShot}
+        best-notification
+        return
+    end
+
     while true
-        notify-send "Some time passed." (best-message)
-        echo do notify-send
+        best-notification
         sleep "$interval"m
     end
 end
