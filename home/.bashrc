@@ -118,6 +118,7 @@ fi
 
 
 export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.scripts/git-utils-jan/
 export PATH=$PATH:~/.nimble/bin
 
 

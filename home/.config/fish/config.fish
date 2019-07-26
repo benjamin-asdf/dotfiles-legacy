@@ -11,6 +11,7 @@ set -gx COSDIR "/home/benj/idlegame"
 set -gx IDLEGAMEDIR "$COSDIR/IdleGame"
 
 set -x PATH $PATH ~/.scripts/
+set -x PATH $PATH ~/.scripts/git-utils-jan/
 set -x PATH $PATH ~/.nimble/bin/
 
 # gtags

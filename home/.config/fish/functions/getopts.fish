@@ -25,3 +25,5 @@ function getopts -d "CLI options parser"
         }
     '
 end
+
+# https://github.com/jorgebucaran/fish-getopts

@@ -1,11 +1,4 @@
 # git
-alias gs='git status'
-alias gfo='git fetch origin'
-alias gch='git checkout'
-alias chdev="gch develop"
-alias gdiscardAll='git checkout .'
-alias gdiscardOther='git checkout *.mat *.asset *.spriteatlas *.prefab'
-
 alias fetchdev="git fetch origin develop:develop"
 alias mergedev='git merge develop'
 alias gcom='git commit -m'
