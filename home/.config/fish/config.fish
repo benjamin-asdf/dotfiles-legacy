@@ -17,4 +17,3 @@ set -x PATH $PATH ~/.nimble/bin/
 # gtags
 set -gx GTAGSLABEL "pygments"
 
-thefuck --alias | source
