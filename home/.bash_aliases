@@ -32,3 +32,5 @@ alias gfr="gf reset"
 alias emax="emacsclient -t"
 alias emacsc="emacsclient -a emacs"
 
+# fd
+alias fd="fdfind"
