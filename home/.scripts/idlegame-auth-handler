@@ -1,0 +1,4 @@
+#!/bin/sh
+
+zenity --info --text "$@"
+mkdir -p /tmp/cos_redirect/ && echo "$@" >> /tmp/cos_redirect/url.txt

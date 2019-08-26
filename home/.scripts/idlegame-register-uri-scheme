@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# https://github.com/nbeaver/thunderlink-install-guide
+# https://askubuntu.com/questions/961745/unable-to-create-custom-uri-scheme-on-ubuntu
+
+protocol_name="x-scheme-handler/myprotocol"
+handler_name="idlegame-auth-handler"
+# handler_name="my-handler"
+
+# type "$handler_name"
+# echo "$?"
+
+# if [ ! type "$handler_name" ];
+#     then echo "dont have handler"
+#     else echo "have handler"
+# fi
+
+# if [ -n type -a "$handler_name" ];
+#    then echo "dont have handler"
+#     else echo "have handler"
+# fi
+
+
+
+# if gio mime "$protocol_name" | grep "No default applications"
+#     then
+
+#     else echo
+
+# fi
