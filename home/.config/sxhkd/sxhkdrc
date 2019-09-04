@@ -1,0 +1,4 @@
+
+
+ctrl + k ; o
+ echo "hello world" >> /tmp/sxhkd-hello
