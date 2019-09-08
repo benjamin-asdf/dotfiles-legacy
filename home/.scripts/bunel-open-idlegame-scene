@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd "$COSDIR" || exit
+projects=$(fd -td -I Assets -d2 | cut -d'/' -f1 | rg IdleGame)
+
+# TODO optionally provide project as first param
+# if [ -n $1 ]; then
+
+project=$(echo "$projects" | dmenu -b -p "Project to open scene:")
+scene=$(fd -tf -I -e unity . IdleGame/Assets/Scenes/ -E Pets/ -E Heroes/ | dmenu -b -p "scene:" -l 10 -i | cut -d'/' -f2-)
+
+bunel "$project" open-scene "$scene"
