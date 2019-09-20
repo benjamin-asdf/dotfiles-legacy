@@ -1,4 +1,7 @@
 
 
-super + ctrl + k ; o
+super + ctrl + k ; o ; b
      bunel-open-idlegame-scene
+
+super + ctrl + k ; o ; a
+     bunel-open-idlegame-scene --active-window
