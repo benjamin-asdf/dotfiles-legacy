@@ -76,6 +76,9 @@ I guess this will speed your initial start time up)
   - select external editor "~/.scripts/ec.sh" (literally just invokes emacsclient with -n)
   - put editor args: `+$(Line) "$(File)"`
 
+# TODO
+- setup uri scheme handler to make connect with twitch work
+  - see "~/.scripts/idlegame-register-uri-scheme"
 
 -Caveats:
  - you get an assertion fail about some socket binding,
