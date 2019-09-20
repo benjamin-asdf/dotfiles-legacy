@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/sxhkd
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=sxhkd
+Comment=man:sxhkd(1)
