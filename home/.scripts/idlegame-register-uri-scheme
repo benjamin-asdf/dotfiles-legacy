@@ -1,30 +1,26 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
 
 # https://github.com/nbeaver/thunderlink-install-guide
 # https://askubuntu.com/questions/961745/unable-to-create-custom-uri-scheme-on-ubuntu
 
 protocol_name="x-scheme-handler/myprotocol"
 handler_name="idlegame-auth-handler"
-# handler_name="my-handler"
-
-# type "$handler_name"
-# echo "$?"
-
-# if [ ! type "$handler_name" ];
-#     then echo "dont have handler"
-#     else echo "have handler"
-# fi
-
-# if [ -n type -a "$handler_name" ];
-#    then echo "dont have handler"
-#     else echo "have handler"
-# fi
+# desktop_file=~/.local/share/applications/idlegame-auth-handler.desktop
+desktop_file=/tmp/some-test-file
 
 
+# [ ! -e "$desktop_file" ] && echo "$desktop_file" is not a file. Fix your dotfiles, man && exit 1
 
-# if gio mime "$protocol_name" | grep "No default applications"
-#     then
+# [ ! -x "$desktop_file" ] && echo making desktop file executable.. &&\
+#     chmod +x "$desktop_file"
 
-#     else echo
+# [ ! "$(idlegame-auth-handler -v)" ] && echo idlegame-auth-handler is not in your path. Check dotfiles, maybe it is not executable? You probably want to add ~/.scipts to your path. && exit 1
 
-# fi
+
+if gio mime "$protocol_name" | grep -q "No default applications"
+    then gio mime "$protocol_name" "$desktop_file"
+    else echo mime is registered
+fi
+
+# xdg-open "$protocol_name"

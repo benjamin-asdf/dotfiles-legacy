@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Idlegame Auth Handler
+Type=Application
+Exec=idlegame-auth-handler %u
+MimeType=x-scheme-handler/clashofstreamers
+X-Desktop-File-Install-Version=0.23
