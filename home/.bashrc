@@ -148,6 +148,3 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='fd --type f'
-
-
-source ~/repos/tmux-bash-completion/completions/tmux
