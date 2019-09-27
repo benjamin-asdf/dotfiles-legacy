@@ -14,6 +14,12 @@ set -x PATH $PATH ~/.scripts/
 set -x PATH $PATH ~/.scripts/git-utils-jan/
 set -x PATH $PATH ~/.nimble/bin/
 
+# put everthing in .local/bin/ and subdirs into path
+for path in (du $HOME/.local/bin/ | cut -f2)
+    set -x PATH $PATH $path
+end
+
+
 # gtags
 set -gx GTAGSLABEL "pygments"
 
