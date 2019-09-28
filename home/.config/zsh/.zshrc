@@ -18,7 +18,23 @@ fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+
+# on slow systems, only check if we need to update dump file once per day
+# https://gist.github.com/ctechols/ca1035271ad134841284#gistcomment-2308206
+if [ $SLOW_SYSTEM ]; then
+    setopt EXTENDEDGLOB
+    for dump in ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m1); do
+        compinit
+        if [[ -s "$dump" && (! -s "$dump.zwc" || "$dump" -nt "$dump.zwv" ) ]]; then
+            zcompile "$dump"
+        fi
+    done
+    unsetopt EXTENDEDGLOB
+    compinit -C
+    else # quick system
+        compinit
+fi
+
 _comp_options+=(globdots)		# Include hidden files.
 
 # vi mode
