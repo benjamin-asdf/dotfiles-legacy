@@ -9,6 +9,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
+
+# homeshick (before compinit for completion)
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
