@@ -27,3 +27,6 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 
 # set caps key to ESC
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+
+# laptop
+export SLOW_SYSTEM=1
