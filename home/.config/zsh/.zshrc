@@ -1,4 +1,4 @@
-# Luke's config for the Zoomer Shell
+# adapted from Lukes zoomer shell
 
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -8,7 +8,6 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
-
 
 # homeshick (before compinit for completion)
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
@@ -95,6 +94,8 @@ bindkey '^e' edit-command-line
 # fzf
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
 export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 source "$HOME/.config/zsh/fzf-keybindings.zsh"
 
 
