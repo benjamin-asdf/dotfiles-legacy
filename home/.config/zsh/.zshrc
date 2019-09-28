@@ -91,10 +91,12 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-# Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
 # fzf
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
 export FZF_DEFAULT_COMMAND="fd --type f"
 source "$HOME/.config/zsh/fzf-keybindings.zsh"
 
+
+# zsh-syntax-highlighting. Should be last because it checks modules
+source "$HOME/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
