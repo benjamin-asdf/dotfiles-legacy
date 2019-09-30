@@ -82,11 +82,11 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-# Edit line in vim with ctrl-e:
+# Edit line in emacs with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Load aliases and shortcuts if existent.
+# Load aliases, shortcuts, dircolors, if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 [ -f "$HOME/.config/zsh/dir-colors.zsh" ] && source "$HOME/.config/zsh/dir-colors.zsh"
