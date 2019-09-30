@@ -16,8 +16,8 @@ fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 # fzf completions
 fpath=($HOME/.fzf/shell/completion.zsh $fpath)
 
+# =============================== auto complete ================================
 
-# Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -39,6 +39,7 @@ if [ $SLOW_SYSTEM ]; then
 fi
 
 _comp_options+=(globdots)		# Include hidden files.
+# ==============================================================================
 
 # vi mode
 bindkey -v
