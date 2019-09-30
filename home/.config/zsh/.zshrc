@@ -13,6 +13,10 @@ HISTFILE=~/.cache/zsh/history
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
+# fzf completions
+fpath=($HOME/.fzf/shell/completion.zsh $fpath)
+
+
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
