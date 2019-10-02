@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
-branches=$(git branch | grep "[^\*] ")
+#!/bin/sh
+
+branches=$(git branch | grep "[^\\*] ")
 remoteBranches=$(git branch -r)
 
 echo "$branches" | while read -r branch; 
