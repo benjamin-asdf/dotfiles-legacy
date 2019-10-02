@@ -9,14 +9,14 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-# homeshick (before compinit for completion)
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# =============================== completions ================================
+# before compinit
+# homeshick
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
-# fzf completions
+# fzf
 fpath=($HOME/.fzf/shell/completion.zsh $fpath)
-
-# =============================== auto complete ================================
 
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -95,6 +95,8 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 [ -f "$HOME/.config/zsh/dir-colors.zsh" ] && source "$HOME/.config/zsh/dir-colors.zsh"
+[ -f "$HOME/.homesick/repos/homeshick/homeshick.sh" ] && source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
 
 # fzf
 setopt HIST_IGNORE_ALL_DUPS # we do not want dups in our history
