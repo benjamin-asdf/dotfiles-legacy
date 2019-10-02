@@ -5,12 +5,16 @@
 PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export PATH
 
-
 export ALTERNATE_EDITOR="vim"
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -a emacs"
 
+# zsh
 export ZDOTDIR="$HOME/.config/zsh/"
+
+# idlegame
+export COSDIR="/home/benj/idlegame"
+export IDLEGAMEDIR="$COSDIR/IdleGame"
 
 # less/man colors
 export LESS=-R
