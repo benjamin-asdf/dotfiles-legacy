@@ -12,4 +12,4 @@ else
 fi
 
 scene=$(fd -tf -I -e unity . IdleGame/Assets/Scenes/ -E Pets/ -E Heroes/ | dmenu -b -p "scene:" -l 10 -i | cut -d'/' -f2-)
-[ -n "$project"  ] && [ -n "$scene" ] && bunel "$project" open-scene "$scene"
+[ -n "$project" ] && [ -n "$scene" ] && bunel "$project" open-scene "$scene"
