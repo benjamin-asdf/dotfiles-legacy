@@ -134,17 +134,6 @@ export GTAGSLABEL="pygments"
 export COSDIR="/home/benj/idlegame"
 export IDLEGAMEDIR="$COSDIR/IdleGame"
 
-# homeshick
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
-
-
 # workspaces TODO find out where to put gsettings
 # gsettings set org.gnome.mutter workspaces-only-on-primary false
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='fd --type f'
-
-
-source ~/repos/tmux-bash-completion/completions/tmux
