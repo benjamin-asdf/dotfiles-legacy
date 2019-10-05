@@ -8,3 +8,7 @@ alias gfetchmerge='git fetch && git fetch origin develop:develop && git merge de
 
 # idlegame
 [ -n $COSDIR ] && alias cdcos='cd $COSDIR'
+
+
+# emacs
+alias ec='emacsclient -n'
