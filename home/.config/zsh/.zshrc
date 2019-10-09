@@ -112,3 +112,6 @@ source "$HOME/.fzf/shell/key-bindings.zsh"
 
 # zsh-syntax-highlighting. Should be last because it checks modules
 source "$HOME/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# benj startup message, if interactive
+[[ $- == *i* ]] && hash best-message && echo Welcome to the benj zoomer shell. $(best-message)
