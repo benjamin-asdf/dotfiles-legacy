@@ -52,6 +52,9 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
+# M-. emacs style
+bindkey -v '^[.' insert-last-word
+
 # Change cursor shape for different vi modes.
 cursor_solid_beam='\e[6 q'
 cursor_solid_block='\e[2 q'
