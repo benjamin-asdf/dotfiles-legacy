@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-redshift -O 1500
