@@ -22,5 +22,3 @@ end
 
 # gtags
 set -gx GTAGSLABEL "pygments"
-
-thefuck --alias | source
