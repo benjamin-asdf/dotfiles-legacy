@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+
+log () {
+    printf '%s\n' "$1" >> /tmp/bunel-log
+}
+
+[ -f /tmp/bunel-log ] && rm /tmp/bunel-log
+
+
+cd "$COSDIR" || exit
+
+
+project=$(xdotool getactivewindow getwindowname | rg '.* - (IdleGame.*) - .*' -r '$1')
+active_scene=$(xdotool getactivewindow getwindowname | rg '.* - (\w+.unity) - .*' -r '$1' | xargs -I '{}' fd -I -e unity {} "$project")
+
+hierachy_name=$(rg -e 'm_Name: ((\\w+)|('.*'))' "$active_scene" -r '$1' | awk '{print $1}' | dmenu -b -p "transform:" -l 10)
+
+
+log "$(date) -- '$$'"
+log "$active_scene"
+log hierachy_name:"$hierachy_name"
+
+bunel "$project" select-in-hierachy "$hierachy_name"
+
+
+# not yet, not yet..

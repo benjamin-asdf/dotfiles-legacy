@@ -1,0 +1,3 @@
+#!/bin/sh
+
+spawn-idlegame-konsole idlegame-client $"IDLEGAMEDIR"
