@@ -114,4 +114,4 @@ source "$HOME/.fzf/shell/key-bindings.zsh"
 source "$HOME/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # benj startup message, if interactive
-[[ $- == *i* ]] && hash best-message && echo Welcome to the benj zoomer shell. $(best-message)
+[[ $- == *i* ]] && hash best-message && echo Welcome to the benj zopanime shell. $(best-message)
