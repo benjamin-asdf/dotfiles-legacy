@@ -5,3 +5,6 @@ super + ctrl + k ; o ; b
 
 super + ctrl + k ; o ; a
      bunel-open-idlegame-scene --active-window
+
+super + ctrl + k ; s
+    bunel-select-in-scene
