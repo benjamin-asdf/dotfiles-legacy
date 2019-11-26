@@ -89,3 +89,12 @@ I guess this will speed your initial start time up)
  - once, restarting unity fixed it (but it reimported stuff)
  - other time I had to `git clean -xdf`.
  - bit on my todo to find out what causes it..
+ -
+
+
+
+
+
+
+- getting specific unity version:
+https://beta.unity3d.com/download/ff5b465c8d13/public_download.html
