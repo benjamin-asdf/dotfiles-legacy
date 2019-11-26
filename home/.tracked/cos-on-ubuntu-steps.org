@@ -74,7 +74,7 @@ I guess this will speed your initial start time up)
 
 - unity external editor:
   - select external editor "~/.scripts/ec.sh" (literally just invokes emacsclient with -n)
-  - put editor args: `+$(Line) "$(File)"`
+  - put editor args: `+$(Line) $(File)`
 
 # TODO
 - setup uri scheme handler to make connect with twitch work
