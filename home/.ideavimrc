@@ -41,4 +41,4 @@ nmap <leader>re :action RenameElement<cr>
 nmap <leader>rf :action RenameFile<cr>
 nmap <leader>rl :action RecentLocations<cr>
 nmap gh :action ShowErrorDescription<cr>
-nmap <leader>tq :action CloseContent<cr>
+nmap <leader>bd :action CloseContent<cr>
