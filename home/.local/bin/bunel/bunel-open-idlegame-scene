@@ -7,10 +7,8 @@ project=
 
 if [ "$1" == "--active-window" ]
 then
-    project=$(xdotool getactivewindow getwindowname | rg '.* - (IdleGame.*) - .*' -r '$1')
+    project=$(xdotool getactivewindow getwindowname | grep -Po 'Unity - \K[^ ]*')
 else
-    bunel-select-in-scene
-    exit 0
     projects=$(fd -td -I Assets -d2 | cut -d'/' -f1 | rg IdleGame)
     project=$(echo "$projects" | dmenu -b -p "Project to open scene:")
 fi
