@@ -14,35 +14,9 @@ export VISUAL="emacsclient -a emacs"
 export ZDOTDIR="$HOME/.config/zsh/"
 
 # idlegame
-export COSDIR="$HOME/idlegame"
+export COSDIR="c:/ClashOfStreamers"
 export IDLEGAMEDIR="$COSDIR/IdleGame"
-
-export PASSWORD_STORE_DIR="$HOME/.local/.password-store"
-# less/man colors
-export LESS=-R
-LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"; a="${a%_}"
-export LESS_TERMCAP_mb
-LESS_TERMCAP_md="$(printf '%b' '[1;36m')"; a="${a%_}"
-export LESS_TERMCAP_md
-LESS_TERMCAP_me="$(printf '%b' '[0m')"; a="${a%_}"
-export LESS_TERMCAP_me
-LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"; a="${a%_}"
-export LESS_TERMCAP_so
-LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
-export LESS_TERMCAP_se
-LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
-export LESS_TERMCAP_us
-LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
-export LESS_TERMCAP_ue
-
-# TODO
-# [ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
 
 # If we are running bash, source bashrc
 [ -n "$BASH_VERSION" ] && [ -f ~/.bashrc ] && . "$HOME/.bashrc"
 
-# set caps key to ESC
-dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
-
-# quicker xrate (the rate for when key held down makes more events)
-xset r rate 300 50
