@@ -1,0 +1,44 @@
+let mapleader=" "
+set multiple-cursors
+set surround
+set is
+set ic
+set scs
+nmap gu :action FindUsages<CR>
+nmap gb :action Back<CR>
+nmap gi :action ReSharperGotoImplementation<CR>
+nmap <leader>l :action KJumpAction<cr>
+nmap <leader>jw :action KJumpAction.Word0<cr>
+nmap <leader>jl :action KJumpAction.Line<cr>
+nmap <leader>pp :action FindInPath<cr>
+nmap <leader>pr :action ReplaceInPath<cr>
+nmap <leader>pg :action SearchEverywhere<cr>
+nmap <leader>ps :action GotoSymbol<cr>
+nmap <leader>pc :action GotoClass<cr>
+nmap <leader>pf :action GotoFile<cr>
+nmap <leader>pa :action GotoAction<cr>
+map <C-n> :action SelectNextOccurrence<cr>
+nmap <leader>ca :action SelectAllOccurrences<cr>
+nmap <leader>wl :action VimWindowLeft<cr>
+nmap <leader>wq :action VimWindowClose<cr>
+nmap <leader>ww :action VimWindowNext<cr>
+nmap <leader>wo :action VimWindowOnly<cr> <bar> :action CloseAllEditorsButActive<cr>
+nmap <leader>wp :action VimWindowPrev<cr>
+nmap <leader>wr :action VimWindowRight<cr>
+nmap <leader>wn :action VimWindowSplitVertical<cr>
+noremap <leader>gl :action Vcs.Show.Log<CR>
+map <leader>gb :action Git.Branches<cr>
+nmap <leader>gc :action Git.CompareWithBranch<cr>
+nmap <leader>gk :action Git.Commit.And.Push.Executor<cr>
+nmap <leader>grc :action Git.ResolveConflicts<cr>
+nmap <leader>tn    :action VimMotionNextTab<cr>
+nmap <leader>tp    :action VimMotionPreviousTab<cr>
+nmap <leader>to    :action CloseAllEditorsButActive<cr>
+nmap gc :action ActivateTerminalToolWindow<cr>
+nmap <leader>sd :action SaveDocument<cr>
+nmap <leader>sa :action SaveAll<cr>
+nmap <leader>re :action RenameElement<cr>
+nmap <leader>rf :action RenameFile<cr>
+nmap <leader>rl :action RecentLocations<cr>
+nmap gh :action ShowErrorDescription<cr>
+nmap <leader>tq :action CloseContent<cr>
