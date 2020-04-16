@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+echo heloo
+
+git ls-files --unmerged | awk '{print $4}' | uniq | sort | sed -e 's|\ |\\ |g' > conflicted
+
+xargs -a conflicted git checkout --theirs --

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+theirs-to-file
+
+sed conflicted -e 's|IdleGame/||' > IdleGame/prefabs-for-rewrite.txt
