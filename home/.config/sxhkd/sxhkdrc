@@ -1,10 +1,10 @@
 
 
-super + ctrl + k ; o ; b
-     bunel-open-idlegame-scene
+# super + ctrl + k ; o ; b
+#      bunel-open-idlegame-scene
 
-super + ctrl + k ; o ; a
-     bunel-open-idlegame-scene --active-window
+super + ctrl + k ; o ; p
+      bunel-open -a
 
-super + ctrl + k ; s
-    bunel-select-in-scene
+# super + ctrl + k ; s
+#     bunel-select-in-scene
