@@ -1,0 +1,4 @@
+home/.local/bin/dump_find_refs
+home/.local/bin/flake8
+home/.local/bin/pyflakes
+home/.local/bin/pycodestyle

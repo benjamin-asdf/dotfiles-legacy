@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* clean shit up
+  - there is so much shit in the home dir now man
