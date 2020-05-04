@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git status --porcelain -z | grep -z -e "$1" | sed -z -e 's|.. ||'
