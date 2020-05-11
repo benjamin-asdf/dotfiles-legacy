@@ -79,6 +79,17 @@ I guess this will speed your initial start time up)
 # TODO
 - setup uri scheme handler to make connect with twitch work
   - see "~/.scripts/idlegame-register-uri-scheme"
+  -
+
+
+mergetool:
+[mergetool "unityyamlmerge"]
+    trustExitCode = false
+    cmd = /opt/unity/Unity-2019.2.8f1/Editor/Data/Tools/UnityYAMLMerge merge -h -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+
+put this into the git config,
+fix the path for your current unity installation.
+
 
 -Caveats:
  - you get an assertion fail about some socket binding,
