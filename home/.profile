@@ -13,9 +13,10 @@ export VISUAL="emacsclient -a emacs"
 export ZDOTDIR="$HOME/.config/zsh/"
 
 # idlegame
-export COSDIR="/home/benj/idlegame"
+export COSDIR="$HOME/idlegame"
 export IDLEGAMEDIR="$COSDIR/IdleGame"
 
+export PASSWORD_STORE_DIR="$HOME/.local/.password-store"
 # less/man colors
 export LESS=-R
 LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"; a="${a%_}"
