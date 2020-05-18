@@ -1,3 +1,3 @@
 #!/bin/sh
 
-git branch -l | grep '\*' | awk '{print $2}' | clip
+git branch --list | grep '*' | cut -c 3- | clip
