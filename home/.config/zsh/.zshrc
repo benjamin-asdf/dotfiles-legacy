@@ -1,8 +1,8 @@
 # adapted from Lukes zoomer shell
 
-# Enable colors and change prompt:
+# Enable colors
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]$mode_prompt%{$reset_color%}$%b "
 
 # History in cache directory:
 HISTSIZE=10000
@@ -55,20 +55,29 @@ bindkey -v '^?' backward-delete-char
 # M-. emacs style
 bindkey -v '^[.' insert-last-word
 
-# Change cursor shape for different vi modes.
+# Vi modes curser and prompt.
+insert_mode_prompt="$fg[green]%}[I]"
+norm_mode_prompt="$fg[black]$bg[yellow]%}[N]"
+mode_prompt=$insert_mode_prompt
 cursor_solid_beam='\e[6 q'
 cursor_solid_block='\e[2 q'
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
+      mode_prompt=$norm_mode_prompt
       echo -ne "$cursor_solid_block"
   elif [[ ${KEYMAP} == main ]] ||
        [[ ${KEYMAP} == viins ]] ||
        [[ ${KEYMAP} = '' ]] ||
        [[ $1 = 'beam' ]]; then
+      mode_prompt=$insert_mode_prompt
       echo -ne "$cursor_solid_beam"
   fi
+  # whole prompt string
+  PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]$mode_prompt%{$reset_color%}$%b "
+  zle reset-prompt
 }
+
 zle -N zle-keymap-select
 zle-line-init() {
     zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
@@ -77,6 +86,10 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne "$cursor_solid_beam" # Use beam shape cursor on startup.
 preexec() { echo -ne "$cursor_solid_beam" ;} # Use beam shape cursor for each new prompt.
+
+function zle-line-finish {
+    mode_prompt=$insert_mode_prompt
+}
 
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
