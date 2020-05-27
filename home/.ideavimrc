@@ -42,3 +42,4 @@ nmap <leader>rf :action RenameFile<cr>
 nmap <leader>rl :action RecentLocations<cr>
 nmap gh :action ShowErrorDescription<cr>
 nmap <leader>bd :action CloseContent<cr>
+set ideajoin
