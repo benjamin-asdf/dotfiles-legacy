@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo get git lfs obj $1
-
 if [ $# -ne 1 ] ; then
     echo "Usage: <filename>"
     exit 1
@@ -9,7 +7,6 @@ fi
 
 Oid=$(grep "sha256" "$1" | cut -d ":" -f 2)
 if [ "$Oid" != "" ]; then
-    echo oid: $Oid
     Oid12=$(echo "$Oid" | cut -b 1-2)
     Oid34=$(echo "$Oid" | cut -b 3-4)
     Object=$(git-repo-root)/.git/lfs/objects/$Oid12/$Oid34/$Oid

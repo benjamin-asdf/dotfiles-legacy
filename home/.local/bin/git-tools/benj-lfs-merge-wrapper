@@ -1,47 +1,28 @@
 #!/bin/sh
 
-
 # Use this temporaliy as the executable for the unity merge tool.
-# first arg is the actuall merge tool executable
+# first arg is the actual merge tool executable
+
+# example git config looks like this:
+
+# [mergetool "unityyamlmerge"]
+# trustExitCode = false
+# cmd =/benj-lfs-merge-wrapper /opt/unity/Unity-2019.2.8f1/Editor/Data/Tools/UnityYAMLMerge "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
 
 
-echo args: "$@" > /tmp/hacker-log
+if [ ! -x "$1" ] ; then
+    echo "first arg should be the merge tool excutable."
+    exit 1
+fi
 
-# if [ ! -x "$1" ] ; then
-#     echo "first arg should be the merge tool excutable."
-#     exit 1
-# fi
+# try to pass the actual blob instead of the git lfs pointer
 
-echo "pwd is" >> /tmp/hacker-log
-pwd >> /tmp/hacker-log
+git-lfs-obj-with-pointer "$2" > pointer && base="$(cat pointer)" || base="$2"
+git-lfs-obj-with-pointer "$3" > pointer && remote="$(cat pointer)" || remote="$3"
+git-lfs-obj-with-pointer "$4" > pointer && local="$(cat pointer)" || local="$4"
 
-# pass repo root as second arg
+echo base: "$base"
+echo remote: "$remote"
+echo local: "$local"
 
-# fix the arg nums
-
-# second arg is the git root
-
-# /home/benj/.local/bin/git-tools/git-lfs-obj-with-pointer /home/benj/idlegame/IdleGame/Assets/#/Scripts/Misc/Globals/Globals_LOCAL_1488558.asset
-
-
-base=/home/benj/.local/bin/git-tools/git-lfs-obj-with-pointer "$4"
-echo $base
-
-# remote="$(git-lfs-obj-with-pointer "$5")" || "$5"
-# local="$(git-lfs-obj-with-pointer "$6")" || "$6"
-# merged="$(git-lfs-obj-with-pointer "$7")" || "$7"
-
-
-# echo base: "$base"
-# echo remote: "$remote"
-# echo local: "$local"
-# echo merged: "$merged"
-
-
-
-# cmd = /opt/unity/Unity-2019.2.8f1/Editor/Data/Tools/UnityYAMLMerge merge -h -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
-
-
-
-
-# args: /opt/unity/Unity-2019.2.8f1/Editor/Data/Tools/UnityYAMLMerge -h -p ./IdleGame/Assets/#/Scripts/Misc/Globals/Globals_LOCAL_1474298.asset ./IdleGame/Assets/#/Scripts/Misc/Globals/Globals_REMOTE_1474298.asset ./IdleGame/Assets/#/Scripts/Misc/Globals/Globals_LOCAL_1474298.asset IdleGame/Assets/#/Scripts/Misc/Globals/Globals.asset
+"$1" merge -h -p "$base" "$remote" "$local" "$5"
