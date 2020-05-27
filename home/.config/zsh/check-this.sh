@@ -27,11 +27,23 @@ function set-prompt () {
     PS1="%{$terminfo_down_sc$VI_MODE$terminfo[rc]%}%~ $ "
 }
 
+cursor_solid_beam='\e[6 q'
+cursor_solid_block='\e[2 q'
+
 function zle-line-init zle-keymap-select {
     set-prompt
     zle reset-prompt
+    if [[ ${KEYMAP} == vicmd ]] ||
+           [[ $1 = 'block' ]]; then
+        echo -ne "$cursor_solid_block"
+    elif [[ ${KEYMAP} == main ]] ||
+             [[ ${KEYMAP} == viins ]] ||
+             [[ ${KEYMAP} = '' ]] ||
+             [[ $1 = 'beam' ]]; then
+        echo -ne "$cursor_solid_beam"
+    fi
 }
-preexec () { print -rn -- $terminfo[el]; }
+preexec () { print -rn -- $terminfo[el]; echo -ne "$cursor_solid_beam" ; }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
