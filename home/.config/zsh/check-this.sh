@@ -4,14 +4,16 @@
 
 terminfo_down_sc=$terminfo[cud1]$terminfo[cuu1]$terminfo[sc]$terminfo[cud1]
 
-function insert-mode () { echo "-- INSERT --" }
-function normal-mode () { echo "-- NORMAL --" }
+function insert-mode () { echo "$fg[green]%}[ INSERT ]" }
+function normal-mode () { echo "$fg[black]$bg[yellow]%}[ NORMAL ]" }
 
+# TODO I want the prompt in one line and some colors and formatting
 precmd () {
     # yes, I actually like to have a new line, then some stuff and then
     # the input line
+    # %F{green}[%?]%f
     print -rP "
-[%D{%a, %d %b %Y, %H:%M:%S}] %n %{$fg[blue]%}%m%{$reset_color%}"
+[%?]%d@%n~%{$fg[cyan]%}%m%{$reset_color%}"
 
     # this is required for initial prompt and a problem I had with Ctrl+C or
     # Enter when in normal mode (a new line would come up in insert mode,
