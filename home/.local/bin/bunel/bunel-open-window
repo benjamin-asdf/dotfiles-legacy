@@ -1,9 +1,7 @@
 #!/bin/sh
 
 
-window_file="$IDLEGAMEDIR/windows.files"
-
-
+window_file="$IDLEGAMEDIR/windows.best.files"
 
 [ ! -f "$window_file" ] && echo "expects a window lookup at project root windows.files" && exit 1
 
