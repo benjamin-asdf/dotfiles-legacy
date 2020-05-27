@@ -4,8 +4,8 @@
 
 terminfo_down_sc=$terminfo[cud1]$terminfo[cuu1]$terminfo[sc]$terminfo[cud1]
 
-function insert-mode () { echo "$fg[green]%}[ INSERT ]" }
-function normal-mode () { echo "$fg[black]$bg[yellow]%}[ NORMAL ]" }
+function insert-mode () { echo "%F{green}[ INSERT ]%f " }
+function normal-mode () { echo "%F{yellow}[ NORMAL ]%f " }
 
 # TODO I want the prompt in one line and some colors and formatting
 precmd () {
