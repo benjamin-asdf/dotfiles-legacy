@@ -32,7 +32,7 @@ done
 
 
 
-if [ -n $"active_window" ]
+if [ -n "$active_window" ]
 then
     project=$(xdotool getactivewindow getwindowname | grep -Po 'Unity - \K[^ ]*')
 else
@@ -40,8 +40,6 @@ else
     project=$(echo "$projects" | dmenu -b -p "Select project:")
 fi
 
-fdcmd="fd -tf -I -e unity . IdleGame/Assets/Targets/ -E Pets/ -E Heroes/"
-files=`"$fdcmd"`
 
-# target=$(fd -tf -I -e unity . IdleGame/Assets/Targets/ -E Pets/ -E Heroes/ | dmenu -b -p "target:" -l 10 -i | cut -d'/' -f2-)
-# [ -n "$project" ] && [ -n "$target" ] && bunel "$project" open-target "$target"
+target=$(fd -tf -I -e prefab . ~/idlegame/IdleGame/Assets | grep -Po 'Assets/.*$' | dmenu -b -p "target:" -l 10 -i)
+[ -n "$project" ] && [ -n "$target" ] && bunel "$project" open-prefab "$target"
