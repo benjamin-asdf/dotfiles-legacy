@@ -6,5 +6,8 @@
 super + ctrl + k ; o ; p
       bunel-open -a
 
+super + ctrl + k ; l
+      bunel-for-this-proj jump-to-last-thing-clicked
+
 # super + ctrl + k ; s
 #     bunel-select-in-scene

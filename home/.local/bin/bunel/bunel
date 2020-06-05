@@ -6,7 +6,7 @@
 
 bunel_handle_dir="/tmp/bunel-handles"
 
-[ "$#" -eq 0 ] && echo provide at least the project name as argument && exit 1
+[ $# -eq 0 ] && echo provide at least the project name as argument && exit 1
 
 mkdir -p $bunel_handle_dir
 printf "%s\\n" "${@:2}" > "${bunel_handle_dir}/${1}"
