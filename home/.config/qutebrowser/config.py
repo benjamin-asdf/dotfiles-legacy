@@ -16,7 +16,7 @@ config.bind('J', 'scroll-page 0 1')
 config.bind('K', 'scroll-page 0 -1')
 
 config.bind('<Escape>', 'leave-mode', mode='passthrough')
-config.bind('<Shift-Escape>', 'null', mode='passthrough')
+config.unbind('<Shift-Escape>', mode='passthrough')
 
 
 c.tabs.position = "left"
