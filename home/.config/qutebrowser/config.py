@@ -14,6 +14,10 @@ config.bind('<Ctrl-Shift-j>', 'tab-next')
 config.bind('<Ctrl-Shift-k>', 'tab-prev')
 config.bind('J', 'scroll-page 0 1')
 config.bind('K', 'scroll-page 0 -1')
+config.bind('<Space><Space>', 'set-cmd-text :')
+
+config.bind('<Ctrl-;>', 'enter-mode passthrough')
+config.bind('<Ctrl-Space>', 'toggle-selection', mode='caret')
 
 config.bind('<Escape>', 'leave-mode', mode='passthrough')
 config.unbind('<Shift-Escape>', mode='passthrough')
@@ -28,9 +32,6 @@ c.url.searchengines = { 'DEFAULT' : 'https://searx.pofilo.fr/?q={}',
                         'duck' :  'https://duckduckgo.com/?q={}' }
 
 
-# TODO that would be so awesome to have properly with emacsclient
-# c.editor.command = [ "/home/benj/repos/emacs/lib-src/emacsclient -c {file}" ]
-c.editor.command = [ "vim {file}" ]
-
+c.editor.command = [ 'emacsclient', '-c', '{file}' ]
 
 c.url.start_pages = [ c.url.default_page, "https://trello.com/b/kABlCnCj/ben" ]
