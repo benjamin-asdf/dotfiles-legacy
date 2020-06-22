@@ -29,8 +29,10 @@ c.tabs.show = "never"
 
 c.url.default_page = "https://searx.pofilo.fr/"
 c.url.searchengines = { 'DEFAULT' : 'https://searx.pofilo.fr/?q={}',
-                        'duck' :  'https://duckduckgo.com/?q={}' }
+                        'duck'    : 'https://duckduckgo.com/?q={}',
+                        'wa'      : 'https://wiki.archlinux.org/?search={}'}
 
+c.content.host_blocking.lists.append( str(config.configdir) + "/blocked-hosts")
 
 c.editor.command = [ 'emacsclient', '-c', '{file}' ]
 
