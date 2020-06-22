@@ -3,6 +3,7 @@
 
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+PATH="$PATH:$HOME/.dotnet/tools"
 export PATH
 
 export ALTERNATE_EDITOR="vim"
