@@ -18,6 +18,14 @@ HISTFILE=~/.cache/zsh/history
 # homeshick
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
+# nuke
+_nuke_zsh_complete()
+{
+    local completions=("$(nuke :complete "$words")")
+    reply=( "${(ps:\n:)completions}" )
+}
+compctl -K _nuke_zsh_complete nuke
+
 # fzf
 fpath=($HOME/.fzf/shell/completion.zsh $fpath)
 
