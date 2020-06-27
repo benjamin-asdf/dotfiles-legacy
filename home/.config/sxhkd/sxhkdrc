@@ -11,3 +11,6 @@ super + ctrl + k ; l
 
 # super + ctrl + k ; s
 #     bunel-select-in-scene
+
+super + ctrl + k ; s ; b
+      swap-default-browser
