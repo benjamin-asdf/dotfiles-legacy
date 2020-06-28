@@ -4,6 +4,67 @@ set surround
 set is
 set ic
 set scs
+set ignorecase
+set ideajoin
+set gdefault
+
+" Scroll screen with the cursor
+noremap <C-k> 2<C-e>
+noremap <C-l> 2<C-y>
+
+
+" Insert mode
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+
+" Previous / next match
+noremap { ,
+noremap } ;
+
+noremap <a-k> }
+noremap <a-l> {
+
+" ============================================================================
+" Visual
+" ============================================================================
+
+noremap <a-v> V
+
+" ============================================================================
+" Editing
+" ============================================================================
+
+" Moving blocks of text in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Select all text
+map <leader>a ggVG
+
+" Copy until the end of the line
+noremap Y y$
+
+" ============================================================================
+" Editor control
+" ============================================================================
+
+" Reload .ideavimrc
+nnoremap <leader>vs :source ~/.ideavimrc<CR>
+
+" ============================================================================
+" IDE actions
+" ============================================================================
+
+
+nnoremap / :action Find<CR>
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
+
+nnoremap U :action $Redo<CR>
+" nnoremap s :action emacsIDEAs.AceJumpWord<CR>
+
 nmap gu :action FindUsages<CR>
 nmap gb :action Back<CR>
 nmap gi :action ReSharperGotoImplementation<CR>
@@ -42,4 +103,3 @@ nmap <leader>rf :action RenameFile<cr>
 nmap <leader>rl :action RecentLocations<cr>
 nmap gh :action ShowErrorDescription<cr>
 nmap <leader>bd :action CloseContent<cr>
-set ideajoin
