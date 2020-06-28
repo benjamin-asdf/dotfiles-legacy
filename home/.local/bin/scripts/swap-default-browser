@@ -8,5 +8,4 @@
 best_browsers="google-chrome.desktop
 brave-browser.desktop
 org.qutebrowser.qutebrowser.desktop"
-
-xdg-settings set default-web-browser "$(echo "$best_browsers" | dmenu -b -l "$(echo "$best_browsers" | wc -l)" -p "Change default browser to: ")"
+xdg-settings set default-web-browser "$(echo "$best_browsers" | dmenu -b -l "$(echo "$best_browsers" | wc -l)" -p "Default web browser [$(xdg-settings get default-web-browser)] :")"
