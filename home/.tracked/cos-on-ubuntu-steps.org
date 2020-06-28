@@ -106,6 +106,10 @@ fix the path for your current unity installation.
 
 
 
-
 - getting specific unity version:
 https://beta.unity3d.com/download/ff5b465c8d13/public_download.html
+
+- can go here
+- either have xdg open set up to invoke the unity hub
+- or copy the link that you unity wants to open with xdg hub and invoke the untiy hub manually
+https://unity3d.com/get-unity/download/archive
