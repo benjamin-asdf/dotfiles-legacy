@@ -1,0 +1,248 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* idea prefab analyers
+- could have some analzyers for valid prefab state
+  - root game object is inactive
+  - there is only 1 root game object
+  - stuff like that?
+
+
+
+- package folders should no ignore meta files
+-
+
+- everything unity -> update the gitignore so it doesn't track meta files
+- run the the whole deleting thing again
+- delete everything, make it clean
+C:\Users\G4G\RiderProjects\QuickSamples\ConsoleApp1\Program.cs
+
+* FeatureMode - Notes
+** Get an overview over illumati spawner etc
+
+
+** SetCurrencySprite
+  - adds illuminati sprite, if in future mode
+
+** IlluminatiSpawner
+   - can just put the script somewhere, make the sprite look good, save the settings
+   - spawns on initialize, if in future mode
+
+** IllumatiSwapper
+   - if in future mode
+   - put on an img, we try get component on initialize
+
+
+** Whole feature should be your own contexts
+
+
+
+
+
+* Get to know future mode api
+
+
+
+
+
+
+
+* merge branches
+  - make sure that the reward panel is addr.
+  :LOGBOOK:
+  CLOCK: [2020-04-01 Wed 05:33]--[2020-04-01 Wed 06:46] =>  1:13
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2020-04-01 Wed 06:47]
+| Headline       | Time   |
+|----------------+--------|
+| *Total time*   | *2:17* |
+|----------------+--------|
+| merge branches | 2:17   |
+|                |        |
+|                |        |
+#+END:
+
+  CLOCK: [2020-03-31 Tue 18:41]--[2020-03-31 Tue 19:45] =>  1:04
+  :END:
+
+* misc tasks
+** rebuild analzyer for erik
+** check hotfix branch
+   :LOGBOOK:
+   CLOCK: [2020-04-02 Thu 15:26]--[2020-04-02 Thu 16:02] =>  0:36
+   :END:
+
+
+* DONE prefab analzyers
+  CLOSED: [2020-04-08 Wed 18:14]
+  :LOGBOOK:
+  CLOCK: [2020-04-05 Sun 10:59]--[2020-04-05 Sun 11:31] =>  0:32
+  :END:
+** white list prefab names
+** game object names?
+** make it possible for UI to quickly add something
+*** so read whitelist from a file
+    :LOGBOOK:
+    CLOCK: [2020-04-01 Wed 15:23]--[2020-04-01 Wed 16:33] =>  1:10
+    CLOCK: [2020-04-01 Wed 13:40]--[2020-04-01 Wed 14:50] =>  1:10
+    CLOCK: [2020-04-01 Wed 12:54]--[2020-04-01 Wed 13:26] =>  0:32
+    :END:
+** reachable prefabs walker
+*** can also have an easy list with unused prefabs
+    :LOGBOOK:
+    CLOCK: [2020-04-02 Thu 12:39]--[2020-04-02 Thu 14:22] =>  1:43
+    CLOCK: [2020-04-01 Wed 11:39]--[2020-04-01 Wed 12:31] =>  0:52
+    :END:
+** dispatch window for whitelisting things
+   :LOGBOOK:
+   CLOCK: [2020-04-01 Wed 10:40]--[2020-04-01 Wed 11:27] =>  0:47
+   CLOCK: [2020-04-01 Wed 08:22]--[2020-04-01 Wed 10:02] =>  1:40
+   CLOCK: [2020-04-01 Wed 07:42]--[2020-04-01 Wed 08:10] =>  0:28
+   CLOCK: [2020-04-01 Wed 07:01]--[2020-04-01 Wed 07:39] =>  0:38
+   :END:
+
+
+
+** simplify the whitelisting
+   :LOGBOOK:
+   CLOCK: [2020-04-02 Thu 10:36]--[2020-04-02 Thu 11:01] =>  0:25
+   CLOCK: [2020-04-02 Thu 09:40]--[2020-04-02 Thu 10:13] =>  0:33
+   CLOCK: [2020-04-02 Thu 09:00]--[2020-04-02 Thu 09:37] =>  0:37
+   CLOCK: [2020-04-02 Thu 08:26]--[2020-04-02 Thu 08:51] =>  0:25
+   - figured out minor mode coloring and merged stas branch instead
+   CLOCK: [2020-04-02 Thu 05:35]--[2020-04-02 Thu 06:30] =>  0:55
+   CLOCK: [2020-04-01 Wed 17:30]--[2020-04-01 Wed 18:23] =>  0:53
+   :END:
+
+
+* notes sort order
+
+
+
+
+* sort order second phase
+  :LOGBOOK:
+  CLOCK: [2020-04-11 Sat 05:34]--[2020-04-11 Sat 09:37] =>  4:03
+  CLOCK: [2020-04-10 Fri 17:17]--[2020-04-10 Fri 18:04] =>  0:47
+  CLOCK: [2020-04-10 Fri 11:13]--[2020-04-10 Fri 11:43] =>  0:30
+  CLOCK: [2020-04-10 Fri 10:28]--[2020-04-10 Fri 11:07] =>  0:39
+  :END:
+  - write access to sortorder
+  - canvas
+  - renderer
+  - sorting group
+
+** constants:
+   - topbar: (prev 998)
+   - above topbar (prev 999)
+   - below topbar (prev 997)
+   - 1000 is "above topbar + 1)
+   - 999 is "above topbar"
+
+** notes
+ - Assets/#/Sources/HotStories/Forum/MonoBehaviours/Posts/OpenPostView.cs
+ -> sort order -4?
+ Assets/#/Sources/HotStories/Forum/MonoBehaviours/Posts/PostsBook.cs
+ - another -
+
+*** Hideable entity
+*** main:
+    - some waters where -1, changed to 0 so we floor at 0
+    - made shark collider a capsule collider 2d
+*** avatar unlock:
+    - seems like it should be default layer but get's set to globalUI
+
+
+
+
+
+** after updating all labels, somehow there is the bug with the GUI -> preview scenes
+
+
+** avatar building upgrade..? - should be default UI
+** church loot anim, seems like we want to just move it down but hesitant to touch that
+
+
+* notes sort order
+** achievement procc effect?
+
+
+* ref: delete some ignored
+  git diff --name-only develop.. | rg -v IdleGame/ | cut -d/ -f1 | sort | uniq | xargs -I {} sh -c "pushd . && cd {} && git-rm-ignored-files.sh && popd"
+
+
+
+* sort order prefab notes
+** main:
+   - floored to 0 (there where some waters at -1)
+   - shark to sphere collider
+   - colliders, fish, shark to menu
+** geopet go
+   - I reset the prefab to develop, then set the 2 "player circles" that where at a negative value to 0
+   - (this way after the rewrite most stuff is at 0, instead of 1).
+   - the fog should be at 0 so the pet is in front
+   - I put a function that logs negative sort orders for the open prefab. "Tools/Prefabs/SortOrder/SortOrderUtils/LogNegativeSortOrders"
+
+** weekly events:
+*** rewrite event completion view with offset 4
+*** big + small unclaimed rewards with offset 8
+*** offset 8 forge button
+** pet congrats remove sortingg from sunshines
+
+
+
+
+
+
+
+   - Note taken on [2020-04-13 Mon 14:43] \\
+     hello
+
+* questions sort orders
+**  topbar?
+**  presents - used in some places and seems like in the shop I would like a certain offset
+
+* treats - sales
+** open vip smart with amount left for getting vip
+   :LOGBOOK:
+   CLOCK: [2020-04-13 Mon 08:16]--[2020-04-13 Mon 12:32] =>  4:16
+   CLOCK: [2020-04-13 Mon 07:45]--[2020-04-13 Mon 08:13] =>  0:28
+   CLOCK: [2020-04-13 Mon 06:46]--[2020-04-13 Mon 07:35] =>  0:49
+   :END:
+
+
+
+
+
+
+
+
+* sort order make new range
+** can take geopet go, pet congrats and main from develop
+** floor menues to top canvas
+*** Check what is the highest top canvas
+*** Assume that everything behind that one will not show in the menu anyway
+*** so squash everything below and including that to the floor value
+
+
+
+
+* logger file
+** only in airests
+** delete file?

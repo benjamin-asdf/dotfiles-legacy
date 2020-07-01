@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+
+
+# take all theirs for modified, also put the files into a file conflicted.txt
+
+git ls-files --unmerged | awk '{print $4}' | uniq | sort > conflicted.txt
+
+xargs -a conflicted.txt git checkout --theirs --
+xargs -a conflicted.txt git add --

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+
+git-theirs-to-file
+
+cut -d/ -f2- < conflicted.txt | rg -e 'prefab$' > IdleGame/prefabs-for-rewrite.txt
