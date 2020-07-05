@@ -6,18 +6,27 @@ use Proc::ProcessTable;
 
 my $processesFound = 0;
 my $table = Proc::ProcessTable->new;
+my $rss_allowed = 4_294_967_296;
+# my @heavy_procs = ("/opt/rider/JetBrains");
 
 for my $process (@{$table->table}) {
         # skip root processes
         next if $process->uid == 0 or $process->gid == 0;
 
-        # skip any using less than 4 GiB
-        next if $process->rss < 4_294_967_296;
-
-        # document the slaughter
-		    $processesFound = $processesFound + 1;
         (my $cmd = $process->cmndline) =~ s/\s+\z//;
-        print "Killing process: pid=", $process->pid, " uid=", $process->uid, " rss=", $process->rss, " fname=", $process->fname, " cmndline=", $cmd, "\n";
+
+        my $rss_max = $rss_allowed;
+
+        # skip any using less than 4 GiB, double the allowed rss for rider
+        $rss_max *= 2 if ($cmd =~ /^\/opt\/rider\/JetBrains/);
+        print "proc: ", $cmd, "rss_allowed: ", $rss_max, "\n";
+
+        next if $process->rss < $rss_max;
+
+        # # document the slaughter
+		    $processesFound = $processesFound + 1;
+
+        print  "Killing process: pid=", $process->pid, " uid=", $process->uid, " rss=", $process->rss, " fname=", $process->fname, " cmndline=", $cmd, "raw cmd=", $process->cmdline, "\n";
 
         # try first to terminate process politely
         kill 15, $process->pid;
