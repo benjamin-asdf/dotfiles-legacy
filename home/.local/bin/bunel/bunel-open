@@ -41,5 +41,9 @@ else
 fi
 
 
-target=$(fd -tf -I -e prefab . ~/idlegame/IdleGame/Assets | grep -Po 'Assets/.*$' | dmenu -b -p "target:" -l 10 -i)
+fd -tf -I -e prefab . ~/idlegame/IdleGame/Assets | grep -Po 'Assets/.*$' > /tmp/prefab.file
+
+selection=$(rev < prefab.file | cut -d '/' -f1 | rev | dmenu -b -p "target:" -l 10 -i)
+target=$(grep -e "/$selection$" /tmp/prefab.file)
 [ -n "$project" ] && [ -n "$target" ] && bunel "$project" open-prefab "$target"
+rm -f /tmp/prefab.file
