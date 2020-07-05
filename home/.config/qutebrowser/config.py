@@ -7,6 +7,9 @@ dracula.draw.blood(c, {
     }
 })
 
+# searx instances
+# https://search.snopyta.org/
+# https://searx.pofilo.fr
 
 config.bind('tb', 'config-cycle statusbar.hide true false')
 config.bind("tt", 'config-cycle tabs.show never always')
@@ -28,7 +31,7 @@ c.tabs.max_width = 10
 c.tabs.show = "never"
 
 c.url.default_page = "https://searx.pofilo.fr/"
-c.url.searchengines = { 'DEFAULT' : 'https://searx.pofilo.fr/?q={}',
+c.url.searchengines = { 'DEFAULT' : 'https://search.snopyta.org/?q={}',
                         'duck'    : 'https://duckduckgo.com/?q={}',
                         'wa'      : 'https://wiki.archlinux.org/?search={}'}
 
