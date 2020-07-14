@@ -26,6 +26,20 @@ _nuke_zsh_complete()
 }
 compctl -K _nuke_zsh_complete nuke
 
+
+# dotnet
+# zsh parameter completion for the dotnet CLI
+_dotnet_zsh_complete()
+{
+    local completions=("$(dotnet complete "$words")")
+
+    reply=( "${(ps:\n:)completions}" )
+}
+
+compctl -K _dotnet_zsh_complete dotnet
+
+
+
 # fzf
 fpath=($HOME/.fzf/shell/completion.zsh $fpath)
 
