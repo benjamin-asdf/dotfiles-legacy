@@ -14,3 +14,18 @@ super + ctrl + k ; l
 
 super + ctrl + k ; s ; b
       swap-default-browser
+
+super + ctrl + k ; x
+      xkill
+
+
+super + ctrl + k ; j
+      toggle-arrow-key-mode
+
+super + ctrl + k ; J ; j
+      toggle-arrow-key-mode on
+
+super + ctrl + k ; J ; o
+      toggle-arrow-key-mode off
+
+
