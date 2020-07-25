@@ -19,7 +19,7 @@ for my $process (@{$table->table}) {
 
         # skip any using less than 4 GiB, double the allowed rss for rider
         $rss_max *= 2 if ($cmd =~ /^\/opt\/rider\/JetBrains/);
-        print "proc: ", $cmd, "rss_allowed: ", $rss_max, "\n";
+        # print "proc: ", $cmd, "rss_allowed: ", $rss_max, "\n";
 
         next if $process->rss < $rss_max;
 
