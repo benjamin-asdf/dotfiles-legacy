@@ -107,6 +107,7 @@ nmap <leader>bd :action CloseContent<cr>
 
 " misc actions
 nnoremap <leader>z :action HideAllWindows<CR>
+nnoremap <leader>Z :action Restore<CR>
 nnoremap <leader>x :q<CR>
 inoremap ;; <Esc>:action EditorCompleteStatement<CR>
 
