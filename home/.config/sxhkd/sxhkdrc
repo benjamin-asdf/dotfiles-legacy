@@ -1,5 +1,3 @@
-
-
 # super + ctrl + k ; o ; b
 #      bunel-open-idlegame-scene
 
@@ -18,14 +16,23 @@ super + ctrl + k ; s ; b
 super + ctrl + k ; x
       xkill
 
-
 super + ctrl + k ; j
       toggle-arrow-key-mode
 
-super + ctrl + k ; J ; j
-      toggle-arrow-key-mode on
+super + ctrl + k ; i ; c
+      idlegame-client
 
-super + ctrl + k ; J ; o
-      toggle-arrow-key-mode off
+super + ctrl + k ; i ; s
+      idlegame-server
 
+super + ctrl + k ; i ; l
+      idlegame-link
 
+super + ctrl + k ; i ; L
+      idlegame-link-extra.sh
+
+super + ctrl + k ; e
+      emacs
+
+super + ctrl + k ; r
+      rider $IDLEGAMEDIR/IdleGame.sln
