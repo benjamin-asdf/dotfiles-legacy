@@ -15,8 +15,6 @@
 
 lock_file="/tmp/.arrow-key-mode"
 
-echo "$1"
-
 if [ -f "$lock_file" ] || [ "$1" = "off" ]; then
     echo setting arrow mode off
     xmodmap -e "keycode 43 = h H h H"
@@ -32,9 +30,3 @@ else
     xmodmap -e "keycode 46 = Right l Return L"
     touch "$lock_file"
 fi
-
-
-
-# function () {
-
-# }

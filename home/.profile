@@ -43,6 +43,3 @@ export LESS_TERMCAP_ue
 
 # set caps key to ESC
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
-
-# quicker xrate (the rate for when key held down makes more events)
-xset r rate 300 50
