@@ -45,5 +45,6 @@ fd -tf -I -e prefab . ~/idlegame/IdleGame/Assets | grep -Po 'Assets/.*$' > /tmp/
 
 selection=$(rev < prefab.file | cut -d '/' -f1 | rev | dmenu -b -p "target:" -l 10 -i)
 target=$(grep -e "/$selection$" /tmp/prefab.file)
+[ "$(echo "$target" | wc -l)" -ge 2 ] && target=$(echo "$target" | dmenu -b -p "There are multiple $selection, choose:" -l 10 -i)
 [ -n "$project" ] && [ -n "$target" ] && bunel "$project" open-prefab "$target"
 rm -f /tmp/prefab.file
