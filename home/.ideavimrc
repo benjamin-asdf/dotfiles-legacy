@@ -128,9 +128,9 @@ nnoremap <leader>bm :action Maven.ExecuteGoal<CR>
 nnoremap <leader>bM :action ActivateMavenProjectsToolWindow<CR>
 nnoremap <leader>dce :action RunClass<CR>
 nnoremap <leader>dcd :action DebugClass<CR>
-nnoremap <leader>dr :action Run<CR>
+nnoremap <leader>dR :action Run<CR>
 nnoremap <leader>dd :action Debug<CR>
-nnoremap <leader>dc :action Resume<CR>
+nnoremap <leader>dr :action Resume<CR>
 nnoremap <leader>dj :action StepOver<CR>
 nnoremap <leader>dI :action StepInto<CR>
 nnoremap <leader>di :action SmartStepInto<CR>
