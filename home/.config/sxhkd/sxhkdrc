@@ -31,8 +31,14 @@ super + ctrl + k ; i ; l
 super + ctrl + k ; i ; L
       idlegame-link-extra.sh
 
+super + ctrl + k ; i ; e
+      bunel-for-this-proj open-scene "Assets/Scenes/LoadingScene.unity"
+
+
 super + ctrl + k ; e
       emacs
+
+
 
 super + ctrl + k ; r
       rider $IDLEGAMEDIR/IdleGame.sln

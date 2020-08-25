@@ -1,0 +1,11 @@
+#!/bin/sh
+
+help() {
+    echo "Usage:
+    is-ancestor <revision> <revision>
+    Example: is-ancestor develop HEAD "
+}
+
+[ $# -ne 2 ] && echo invalid number of arguments && help && exit 1
+
+(git merge-base --is-ancestor && "$1" is ancestor of "$2") || "$1" is not ancestor of "$2"
