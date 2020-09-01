@@ -42,3 +42,7 @@ super + ctrl + k ; e
 
 super + ctrl + k ; r
       rider $IDLEGAMEDIR/IdleGame.sln
+
+
+super + ctrl + k ; f ; p
+      nautilus ~/Pictures/
