@@ -8,4 +8,7 @@ help() {
 
 [ $# -ne 2 ] && echo invalid number of arguments && help && exit 1
 
-(git merge-base --is-ancestor && "$1" is ancestor of "$2") || "$1" is not ancestor of "$2"
+is_not=" not"
+git merge-base --is-ancestor "$1" "$2"  && is_not=""
+
+printf "%s is%s ancestor of %s\n" "$1" "$is_not" "$2"
