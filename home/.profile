@@ -4,6 +4,7 @@
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 PATH="$PATH:$HOME/.dotnet/tools"
+PATH="$PATH:$HOME/.local/go/bin"
 export PATH
 
 export ALTERNATE_EDITOR="vim"
@@ -12,6 +13,8 @@ export VISUAL="emacsclient -a emacs"
 
 # zsh
 export ZDOTDIR="$HOME/.config/zsh/"
+
+export GOBIN="$HOME/.local/go/bin"
 
 # idlegame
 export COSDIR="$HOME/idlegame"
