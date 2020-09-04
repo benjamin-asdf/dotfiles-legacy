@@ -35,6 +35,12 @@ super + ctrl + k ; i ; e
       bunel-for-this-proj open-scene "Assets/Scenes/LoadingScene.unity"
 
 
+super + ctrl + k ; o ; o
+      open-fav-prefab
+
+super + ctrl + k ; o ; f
+      set-fav-prefab
+
 super + ctrl + k ; e
       emacs
 
