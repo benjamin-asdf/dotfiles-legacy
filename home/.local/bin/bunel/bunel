@@ -4,10 +4,12 @@
 # The second argument is the method we want to invoke.
 # The rest args are optional arguments.
 
-# bunel_handle_dir="/tmp/bunel-handles"
-bunel_handle_dir="/tmp/team-cmds-handles"
+team_cmd_handle_dir="/tmp/team-cmds-handles"
 
 [ $# -eq 0 ] && echo provide at least the project name as argument && exit 1
 
-mkdir -p $bunel_handle_dir
-printf "%s\\n" "${@:2}" > "${bunel_handle_dir}/${1}"
+handle_dir="${team_cmd_handle_dir}/${1}/"
+mkdir -p "$handle_dir"
+curr="$(find "$handle_dir" -maxdepth 1  -type f -printf x | wc -c)"
+next=$((curr+1))
+printf "%s\\n" "${@:2}" > "$handle_dir$next"

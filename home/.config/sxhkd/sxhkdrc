@@ -44,8 +44,6 @@ super + ctrl + k ; o ; f
 super + ctrl + k ; e
       emacs
 
-
-
 super + ctrl + k ; r
       rider $IDLEGAMEDIR/IdleGame.sln
 
