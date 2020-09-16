@@ -1,0 +1,6 @@
+#!/bin/sh
+
+
+[ -z "$(fzf --help)" ] || echo "This depends on fzf being installed. Just download scoop, the run scoop install fzf."
+
+some-debug-methods | fzf
