@@ -6,7 +6,7 @@ from pprint import pprint
 from datetime import datetime
 
 badProcName = "VBCSCompiler"
-badProcAllowedSecs = 80
+badProcAllowedSecs = 100
 processes = {}
 for p in psutil.process_iter(['name', 'username']):
     if p.name() in processes:
