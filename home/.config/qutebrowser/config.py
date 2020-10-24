@@ -37,6 +37,7 @@ c.url.searchengines = { 'DEFAULT' : 'https://search.snopyta.org/?q={}',
 
 c.content.host_blocking.lists.append( str(config.configdir) + "/blocked-hosts")
 
-c.editor.command = [ 'emacsclient', '-c', '{file}' ]
+ # c.editor.command = [ 'emacsclient', '-c', '{file}' ]
+c.editor.command = [ 'emacsclient', '{file}' ]
 
 c.url.start_pages = [ c.url.default_page, "https://trello.com/b/kABlCnCj/ben" ]
