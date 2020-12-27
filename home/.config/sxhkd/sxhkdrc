@@ -48,5 +48,14 @@ super + ctrl + k ; r
       rider $IDLEGAMEDIR/IdleGame.sln
 
 
+
+# f ; files
 super + ctrl + k ; f ; p
       nautilus ~/Pictures/
+
+super + ctrl + k ; f ; v
+      nautilus ~/Videos/
+
+# t ; trello
+super + ctrl + k ; t
+      trello-story-points

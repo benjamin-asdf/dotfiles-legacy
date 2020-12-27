@@ -22,3 +22,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[gitlab]
+	user = Benj
+[gitlab "gitlab.botogames.com/api/v4"]
+	user = Benj

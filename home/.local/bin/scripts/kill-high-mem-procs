@@ -6,7 +6,7 @@ use Proc::ProcessTable;
 
 my $processesFound = 0;
 my $table = Proc::ProcessTable->new;
-my $rss_allowed = 4_294_967_296 * 1.3;
+my $rss_allowed = 4_294_967_296 * 1.35;
 # my @heavy_procs = ("/opt/rider/JetBrains");
 
 for my $process (@{$table->table}) {
