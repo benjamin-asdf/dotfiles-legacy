@@ -72,7 +72,8 @@ c.url.searchengines = {
 
 c.content.host_blocking.lists.append( str(config.configdir) + "/blocked-hosts")
 
- # c.editor.command = [ 'emacsclient', '-c', '{file}' ]
-c.editor.command = [ 'emacsclient', '{file}' ]
+# c.editor.command = [ 'emacsclient', '-c', '{file}' ]
+# c.editor.command = [ 'emacsclient', '{file}', '-s $(fd . /run/user/1000/emacs/)' ]
+c.editor.command = [ 'sh', '/home/benj/.homesick/repos/dotfiles/home/.local/bin/scripts/ec.sh', '{file}' ]
 
 c.url.start_pages = [ c.url.default_page, "https://trello.com/b/kABlCnCj/ben" ]

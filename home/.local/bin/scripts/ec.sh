@@ -1,5 +1,3 @@
 #!/bin/sh
 
-echo "$@" >> /tmp/ec-input
-
-emacsclient -n "$@"
+emacsclient "$1" -s "$(fd . /run/user/1000/emacs/)"
