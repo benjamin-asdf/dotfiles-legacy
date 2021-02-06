@@ -18,7 +18,7 @@ end
 echo "Start linking"
 
 # "Assets"
-for name in "Config" "ProjectSettings" "Packages"
+for name in "Config" "ProjectSettings" "Packages" "ProjectSettings" ".genignore"
     set f1 $currDir/$name
     set f2 $symlinkDir/$name
     if contains dry $argv
@@ -33,5 +33,7 @@ for name in "Config" "ProjectSettings" "Packages"
         end
     end
 end
+
+rm "$symlinkDir/Packages/packages-lock.json"
 
 echo "Success"
