@@ -39,6 +39,8 @@ noremap <a-v> V
 " Editing
 " ============================================================================
 
+nnoremap <leader>oe :action emacsclient<CR>
+
 " Moving blocks of text in visual mode
 vnoremap < <gv
 vnoremap > >gv

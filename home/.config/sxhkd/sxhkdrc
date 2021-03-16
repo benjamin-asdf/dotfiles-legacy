@@ -48,6 +48,13 @@ super + ctrl + k ; r
       rider $IDLEGAMEDIR/IdleGame.sln
 
 
+# clicker
+super + ctrl + k ; c ; x
+      disable-rapid-click
+
+super + ctrl + k ; c ; j
+      start-rapid-click
+
 
 # f ; files
 super + ctrl + k ; f ; p
