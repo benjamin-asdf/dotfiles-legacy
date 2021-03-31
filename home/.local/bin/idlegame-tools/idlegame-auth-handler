@@ -5,4 +5,4 @@
 echo "$@" >> /tmp/auth-handler-res
 
 mkdir -p /tmp/cos_redirect/ && echo "$@" >> /tmp/cos_redirect/url.txt
-# zenity --info --text "$@"
+zenity --info --text "$@"

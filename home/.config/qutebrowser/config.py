@@ -7,13 +7,6 @@ dracula.draw.blood(c, {
     }
 })
 
-# searx instances
-# https://search.snopyta.org/
-# https://searx.pofilo.fr
-
-
-
-
 
 # ambrevar
 # c.auto_save.session = True
@@ -49,25 +42,23 @@ config.bind('<Ctrl-Space>', 'toggle-selection', mode='caret')
 config.bind('<Escape>', 'leave-mode', mode='passthrough')
 config.unbind('<Shift-Escape>', mode='passthrough')
 
-
 c.tabs.position = "left"
 c.tabs.max_width = 10
 c.tabs.show = "never"
 
-# "https://searx.bbaovanc.com/"
-c.url.default_page = "https://searx.fmac.xyz/"
-
+c.url.default_page = "https://searx.webheberg.info/"
 
 c.url.searchengines = {
-    'DEFAULT': 'https://searx.fmac.xyz/?q={}',
+    'DEFAULT': 'https://searx.webheberg.info/{}',
     'duck'   : 'https://duckduckgo.com/?q={}',
     'wa'     : 'https://wiki.archlinux.org/?search={}',
     "so"     : "http://stackoverflow.com/search?q={}",
     "leo"    : "http://dict.leo.org/frde/index_de.html#/search={}",
     "aur"    : "https://aur.archlinux.org/packages.php?O=0&K={}&do_Search=Go",
     "yt"     : "http://www.youtube.com/results?search_query={}",
-    "goo"    : "https://www.google.com/search?sxsrf={}",
+    "goo"    : "https://www.google.com/search?q={}",
     'gg'     : 'https://g4gsearch.com/ws/search/search?a=true&c=%7B%7D&e=true&m&p=1&q={}&s=_score&w=%5B%5D',
+    'wi'     : 'https://en.wikipedia.org/wiki/{}',
 }
 
 
