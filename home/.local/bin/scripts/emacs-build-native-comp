@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+cs ~/repos/emacs
+
+# Needed for compiling libgccjit or we'll get cryptic error messages
+# about failing smoke tests.
+export CC="gcc-10"
+
+./autogen.sh && ./configure --with-mailutils --with-nativecomp
+
+sudo make -j$(nproc) && sudo make install
