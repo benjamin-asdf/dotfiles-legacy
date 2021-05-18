@@ -58,6 +58,16 @@ noremap Y y$
 " Reload .ideavimrc
 nnoremap <leader>vs :source ~/.ideavimrc<CR>
 
+" source ~/repos/intellimacs/spacemacs.vim
+" source ~/repos/intellimacs/extra.vim
+" source ~/repos/intellimacs/major.vim
+" source ~/repos/intellimacs/hybrid.vim
+
+" " Comma for major mode
+" nmap , <leader>m
+" vmap , <leader>m
+
+
 " ============================================================================
 " IDE actions
 " ============================================================================

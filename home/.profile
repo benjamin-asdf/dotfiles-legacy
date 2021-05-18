@@ -4,7 +4,7 @@
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 PATH="$PATH:$HOME/.dotnet/tools"
-PATH="$PATH:$HOME/.local/go/bin"
+PATH="$PATH:$HOME/go/bin"
 export PATH
 
 export ALTERNATE_EDITOR="vim"
@@ -14,7 +14,12 @@ export VISUAL="emacsclient -a emacs"
 # zsh
 export ZDOTDIR="$HOME/.config/zsh/"
 
-export GOBIN="$HOME/.local/go/bin"
+# guix on foreign  distro
+GUIX_PROFILE="$HOME/.config/guix/current"
+export GUIX_PROFILE
+GUIX_LOCPATH="$HOME/.guix-profile/lib/locale"
+export GUIX_LOCPATH
+
 
 # idlegame
 export COSDIR="$HOME/idlegame"
@@ -46,3 +51,6 @@ export LESS_TERMCAP_ue
 
 # set caps key to ESC
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+
+. "$HOME/.guix-profile/etc/profile"
+. "$HOME/.config/guix/current/etc/profile"

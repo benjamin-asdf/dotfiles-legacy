@@ -36,7 +36,7 @@ config.bind('J', 'scroll-page 0 1')
 config.bind('K', 'scroll-page 0 -1')
 config.bind('<Space><Space>', 'set-cmd-text :')
 
-config.bind('<Ctrl-;>', 'enter-mode passthrough')
+config.bind('<Ctrl-l>', 'enter-mode passthrough')
 config.bind('<Ctrl-Space>', 'toggle-selection', mode='caret')
 
 config.bind('<Escape>', 'leave-mode', mode='passthrough')
@@ -46,19 +46,21 @@ c.tabs.position = "left"
 c.tabs.max_width = 10
 c.tabs.show = "never"
 
-c.url.default_page = "https://searx.webheberg.info/"
+c.url.default_page = "https://searx.bar/"
 
 c.url.searchengines = {
-    'DEFAULT': 'https://searx.webheberg.info/{}',
+    'DEFAULT': 'https://searx.bar/?q={}',
     'duck'   : 'https://duckduckgo.com/?q={}',
     'wa'     : 'https://wiki.archlinux.org/?search={}',
     "so"     : "http://stackoverflow.com/search?q={}",
+    "ex"     : "https://examine.com/search/?q={}",
     "leo"    : "http://dict.leo.org/frde/index_de.html#/search={}",
     "aur"    : "https://aur.archlinux.org/packages.php?O=0&K={}&do_Search=Go",
     "yt"     : "http://www.youtube.com/results?search_query={}",
     "goo"    : "https://www.google.com/search?q={}",
     'gg'     : 'https://g4gsearch.com/ws/search/search?a=true&c=%7B%7D&e=true&m&p=1&q={}&s=_score&w=%5B%5D',
     'wi'     : 'https://en.wikipedia.org/wiki/{}',
+    'un'     : 'https://docs.unity3d.com/Manual/30_search.html?q={}'
 }
 
 
