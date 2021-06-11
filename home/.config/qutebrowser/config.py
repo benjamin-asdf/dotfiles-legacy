@@ -40,12 +40,14 @@ config.bind('<Ctrl-l>', 'enter-mode passthrough')
 config.bind('<Ctrl-Space>', 'toggle-selection', mode='caret')
 
 config.bind('<Escape>', 'leave-mode', mode='passthrough')
+config.bind('<Ctrl-e>',':spawn emacsclient --eval "(team-trello-card-dispatch* \\"{url}\\")"', mode='normal')
 config.unbind('<Shift-Escape>', mode='passthrough')
 
 c.tabs.position = "left"
 c.tabs.max_width = 10
 c.tabs.show = "never"
 
+# c.url.default_page = "https://searx.xyz/"
 c.url.default_page = "https://searx.bar/"
 
 c.url.searchengines = {
