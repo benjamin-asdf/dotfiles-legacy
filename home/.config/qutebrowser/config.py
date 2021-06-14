@@ -10,21 +10,21 @@ dracula.draw.blood(c, {
 
 # ambrevar
 # c.auto_save.session = True
-# c.completion.shrink = True
-# c.confirm_quit = ["downloads"]
-# c.content.cache.size = 5242880
+c.completion.shrink = True
+c.confirm_quit = ["downloads"]
+c.content.cache.size = 5242880
 # c.downloads.location.directory = "~/temp"
-# c.downloads.location.prompt = False
-# c.downloads.location.remember = True
+c.downloads.location.prompt = False
+c.downloads.location.remember = True
 # c.editor.command = ["emacsclient", "+{line}:{column}", "{}"]
-# c.hints.scatter = False
+c.hints.scatter = False
 # c.hints.uppercase = True
-# c.input.partial_timeout = 2000
+c.input.partial_timeout = 2000
 # c.tabs.tabs_are_windows = True
 # c.new_instance_open_target = "window"
 # c.tabs.show = "multiple"
 # c.window.title_format = "{title}{title_sep}{host}"
-## lazy_restore does not work when idle.
+# lazy_restore does not work when idle.
 # c.session.lazy_restore = True
 
 
@@ -36,18 +36,18 @@ config.bind('J', 'scroll-page 0 1')
 config.bind('K', 'scroll-page 0 -1')
 config.bind('<Space><Space>', 'set-cmd-text :')
 
-config.bind('<Ctrl-l>', 'enter-mode passthrough')
+config.bind('<Ctrl-l>', 'mode-enter passthrough')
 config.bind('<Ctrl-Space>', 'toggle-selection', mode='caret')
 
-config.bind('<Escape>', 'leave-mode', mode='passthrough')
+config.bind('<Escape>', 'mode-enter normal')
 config.bind('<Ctrl-e>',':spawn emacsclient --eval "(team-trello-card-dispatch* \\"{url}\\")"', mode='normal')
+config.bind('<Ctrl-v>',':spawn vlc {url}', mode='normal')
 config.unbind('<Shift-Escape>', mode='passthrough')
 
 c.tabs.position = "left"
-c.tabs.max_width = 10
+c.tabs.max_width = 7
 c.tabs.show = "never"
 
-# c.url.default_page = "https://searx.xyz/"
 c.url.default_page = "https://searx.bar/"
 
 c.url.searchengines = {
@@ -66,8 +66,8 @@ c.url.searchengines = {
 }
 
 
-c.content.host_blocking.lists.append( str(config.configdir) + "/blocked-hosts")
-
 c.editor.command = [ 'sh', '/home/benj/.homesick/repos/dotfiles/home/.local/bin/scripts/ec.sh', '{file}' ]
 
 c.url.start_pages = [ c.url.default_page, "https://trello.com/b/kABlCnCj/ben" ]
+
+config.load_autoconfig(False)
