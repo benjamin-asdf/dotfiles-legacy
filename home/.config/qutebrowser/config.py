@@ -40,9 +40,8 @@ config.bind('<Ctrl-l>', 'mode-enter passthrough')
 config.bind('<Ctrl-Space>', 'toggle-selection', mode='caret')
 
 config.bind('<Escape>', 'mode-enter normal')
-config.bind('<Ctrl-e>',':spawn emacsclient --eval "(team-trello-card-dispatch* \\"{url}\\")"', mode='normal')
+config.bind('<Ctrl-e>',':spawn ec --eval "(team-trello-card-dispatch \\"{url}\\")"', mode='normal')
 config.bind('<Ctrl-v>',':spawn vlc {url}', mode='normal')
-config.unbind('<Shift-Escape>', mode='passthrough')
 
 c.tabs.position = "left"
 c.tabs.max_width = 7
@@ -66,8 +65,8 @@ c.url.searchengines = {
 }
 
 
-c.editor.command = [ 'sh', '/home/benj/.homesick/repos/dotfiles/home/.local/bin/scripts/ec.sh', '{file}' ]
+c.editor.command = ['ec', '{file}']
 
-c.url.start_pages = [ c.url.default_page, "https://trello.com/b/kABlCnCj/ben" ]
+c.url.start_pages = [c.url.default_page, "https://trello.com/b/kABlCnCj/ben"]
 
 config.load_autoconfig(False)
